@@ -1,7 +1,3 @@
-------------------------------------------------------------------------
-
-editor_options: markdown: wrap: 72 ---
-
 # Santa Barbara Weather Data Pipeline
 
 ## Project Overview
