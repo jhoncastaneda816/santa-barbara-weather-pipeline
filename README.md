@@ -1,9 +1,6 @@
----
+------------------------------------------------------------------------
 
-editor_options: 
-  markdown: 
-    wrap: 72
----
+editor_options: markdown: wrap: 72 ---
 
 # Santa Barbara Weather Data Pipeline
 
@@ -36,15 +33,15 @@ The pipeline extracts daily weather observations for Santa Barbara for the year 
 
 ### Compare each day to the previous day
 
-![](C:\Users\jhonc\OneDrive\Documents\Data%20Engineering\Data%20Engineering%20Projects\Santa%20Barbara%20Weather%20Pipeline\assets\Compare%20each%20day%20to%20the%20previous%20day.png)
+![](C:\Users\jhonc\OneDrive\Documents\Data Engineering\Data Engineering Projects\Santa Barbara Weather Pipeline\assets\Compare each day to the previous day.png)
 
 ### Rank days by maximum temperature
 
-![](C:\Users\jhonc\OneDrive\Documents\Data%20Engineering\Data%20Engineering%20Projects\Santa%20Barbara%20Weather%20Pipeline\assets\Rank%20days%20by%20maximum%20temperature.png)
+![](C:\Users\jhonc\OneDrive\Documents\Data Engineering\Data Engineering Projects\Santa Barbara Weather Pipeline\assets\Rank days by maximum temperature.png)
 
 ### Seven-day moving average temperature
 
-![](C:\Users\jhonc\OneDrive\Documents\Data%20Engineering\Data%20Engineering%20Projects\Santa%20Barbara%20Weather%20Pipeline\assets\Seven-day%20moving%20average%20temperature.png)
+![](C:\Users\jhonc\OneDrive\Documents\Data Engineering\Data Engineering Projects\Santa Barbara Weather Pipeline\assets\Seven-day moving average temperature.png)
 
 ## Pipeline Architecture
 
@@ -64,32 +61,12 @@ src/load.py
 PostgreSQL table: weather_daily
       ↓
 SQL analysis queries and monthly summary view
+```
 
-
-Santa Barbara Weather Pipeline/
-│
-├── data/
-│   ├── raw/
-│   └── processed/
-│
-├── sql/
-│   ├── create_tables.sql
-│   ├── create_views.sql
-│   └── analysis_queries.sql
-│
-├── src/
-│   ├── extract.py
-│   ├── transform.py
-│   └── load.py
-│
-├── .env
-├── .gitignore
-├── README.md
-└── requirements.txt
-Database Table
+### Repo Structure
 
 | Column                | Description                        |
-| --------------------- | ---------------------------------- |
+|-----------------------|------------------------------------|
 | `weather_date`        | Date of the weather observation    |
 | `temperature_2m_max`  | Daily maximum temperature          |
 | `temperature_2m_min`  | Daily minimum temperature          |
