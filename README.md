@@ -1,3 +1,10 @@
+---
+
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
 # Santa Barbara Weather Data Pipeline
 
 ## Project Overview
@@ -27,6 +34,18 @@ The pipeline extracts daily weather observations for Santa Barbara for the year 
 - Precipitation
 - Maximum wind speed
 
+### Compare each day to the previous day
+
+![](C:\Users\jhonc\OneDrive\Documents\Data%20Engineering\Data%20Engineering%20Projects\Santa%20Barbara%20Weather%20Pipeline\assets\Compare%20each%20day%20to%20the%20previous%20day.png)
+
+### Rank days by maximum temperature
+
+![](C:\Users\jhonc\OneDrive\Documents\Data%20Engineering\Data%20Engineering%20Projects\Santa%20Barbara%20Weather%20Pipeline\assets\Rank%20days%20by%20maximum%20temperature.png)
+
+### Seven-day moving average temperature
+
+![](C:\Users\jhonc\OneDrive\Documents\Data%20Engineering\Data%20Engineering%20Projects\Santa%20Barbara%20Weather%20Pipeline\assets\Seven-day%20moving%20average%20temperature.png)
+
 ## Pipeline Architecture
 
 ```text
@@ -46,7 +65,7 @@ PostgreSQL table: weather_daily
       ↓
 SQL analysis queries and monthly summary view
 
-Repository Structure
+
 Santa Barbara Weather Pipeline/
 │
 ├── data/
@@ -67,10 +86,8 @@ Santa Barbara Weather Pipeline/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-
 Database Table
 
-The main PostgreSQL table is weather_daily.
 | Column                | Description                        |
 | --------------------- | ---------------------------------- |
 | `weather_date`        | Date of the weather observation    |
