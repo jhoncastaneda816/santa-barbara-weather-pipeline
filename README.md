@@ -31,17 +31,19 @@ The pipeline extracts daily weather observations for Santa Barbara for the year 
 - Precipitation
 - Maximum wind speed
 
+## Example Outputs
+
 ### Compare each day to the previous day
 
-![](C:\Users\jhonc\OneDrive\Documents\Data Engineering\Data Engineering Projects\Santa Barbara Weather Pipeline\assets\Compare each day to the previous day.png)
+![Compare each day to the previous day](assets/compare_previous_day.png)
 
 ### Rank days by maximum temperature
 
-![](C:\Users\jhonc\OneDrive\Documents\Data Engineering\Data Engineering Projects\Santa Barbara Weather Pipeline\assets\Rank days by maximum temperature.png)
+![Rank days by maximum temperature](assets/rank_max_temperature.png)
 
 ### Seven-day moving average temperature
 
-![](C:\Users\jhonc\OneDrive\Documents\Data Engineering\Data Engineering Projects\Santa Barbara Weather Pipeline\assets\Seven-day moving average temperature.png)
+![Seven-day moving average temperature](assets/seven_day_moving_average.png)
 
 ## Pipeline Architecture
 
