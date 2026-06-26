@@ -65,8 +65,7 @@ SQL analysis queries and monthly summary view
 
 Alternatively, run the full pipeline with one command:
 
-```powershell
-python src\run_pipeline.py
+In powershell: python src\run_pipeline.py
 
 ## Database Table
 
