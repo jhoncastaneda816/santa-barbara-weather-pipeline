@@ -61,7 +61,16 @@ PostgreSQL table: weather_daily
 SQL analysis queries and monthly summary view
 ```
 
-### Repo Structure
+## How to Run the Project
+
+Alternatively, run the full pipeline with one command:
+
+```powershell
+python src\run_pipeline.py
+
+## Database Table
+
+The main PostgreSQL table is weather_daily.
 
 | Column                | Description                        |
 |-----------------------|------------------------------------|
