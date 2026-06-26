@@ -27,20 +27,6 @@ The pipeline extracts daily weather observations for Santa Barbara for the year 
 - Precipitation
 - Maximum wind speed
 
-## Example Outputs
-
-### Compare each day to the previous day
-
-![Compare each day to the previous day](assets/compare_previous_day.png)
-
-### Rank days by maximum temperature
-
-![Rank days by maximum temperature](assets/rank_max_temperature.png)
-
-### Seven-day moving average temperature
-
-![Seven-day moving average temperature](assets/seven_day_moving_average.png)
-
 ## Pipeline Architecture
 
 ```text
@@ -63,9 +49,45 @@ SQL analysis queries and monthly summary view
 
 ## How to Run the Project
 
-Alternatively, run the full pipeline with one command:
+1. Clone the repository.
 
-In powershell: python src\run_pipeline.py
+```powershell
+git clone https://github.com/jhoncastaneda816/santa-barbara-weather-pipeline.git
+cd santa-barbara-weather-pipeline
+```
+
+2. Create and activate a virtual environment.
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+3. Install dependencies.
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+4. Create a .env file with your PostgreSQL credentials.
+
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=weather_pipeline
+DB_USER=postgres
+DB_PASSWORD=your_password_here
+
+5. Run the table creation SQL in PostgreSQL.
+
+```powershell
+sql/create_tables.sql
+```
+
+6. Run the full pipeline.
+
+```powershell
+python src\run_pipeline.py
+```
 
 ## Database Table
 
@@ -80,3 +102,17 @@ The main PostgreSQL table is weather_daily.
 | `precipitation_sum`   | Daily total precipitation          |
 | `wind_speed_10m_max`  | Daily maximum wind speed           |
 | `loaded_at`           | Timestamp when the data was loaded |
+
+## Example Outputs
+
+### Compare each day to the previous day
+
+![Compare each day to the previous day](assets/compare_previous_day.png)
+
+### Rank days by maximum temperature
+
+![Rank days by maximum temperature](assets/rank_max_temperature.png)
+
+### Seven-day moving average temperature
+
+![Seven-day moving average temperature](assets/seven_day_moving_average.png)
